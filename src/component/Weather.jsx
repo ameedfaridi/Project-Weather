@@ -37,9 +37,11 @@ class Weather extends Component {
         console.log(data);
         document.getElementById("display").classList.remove("hide");
         if (data.current.temp_c > 24) {
-          document.getElementById("catch").classList.toggle("hot");
+          document.getElementById("catch").classList.add("hot");
+          document.getElementById("catch").classList.remove("cold");
         } else {
-          document.getElementById("catch").classList.toggle("cold");
+          document.getElementById("catch").classList.remove("hot");
+          document.getElementById("catch").classList.add("cold");
         }
       } catch {
         alert("Invalid City");

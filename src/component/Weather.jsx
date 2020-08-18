@@ -40,8 +40,8 @@ class Weather extends Component {
           document.getElementById("catch").classList.add("hot");
           document.getElementById("catch").classList.remove("cold");
         } else {
-          document.getElementById("catch").classList.remove("hot");
           document.getElementById("catch").classList.add("cold");
+          document.getElementById("catch").classList.remove("hot");
         }
       } catch {
         alert("Invalid City");
